@@ -1,0 +1,11 @@
+FROM python:3-slim
+
+WORKDIR /home
+
+COPY requirements.txt .
+COPY main.py .
+RUN pip install -r requirements.txt
+
+EXPOSE 5000
+
+CMD python main.py
